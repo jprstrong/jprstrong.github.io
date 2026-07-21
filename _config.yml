@@ -6,7 +6,7 @@
 # --- Required options --- #
 
 # Name of website
-title: Jingpu Website
+title: Jingpu Chen
 
 # Your name to show in the footer
 author: Jingpu CHEN (陈璟璞)
@@ -15,10 +15,8 @@ author: Jingpu CHEN (陈璟璞)
 
 navbar-links:
   About Me: "aboutme"
-  Resources:
-    - Beautiful Jekyll: "https://beautifuljekyll.com"
-    - Learn markdown: "https://www.markdowntutorial.com/"
-  Author's home: "https://jingpuchen.com"
+  Field Notes: "/"
+  GitHub: "https://github.com/jprstrong"
 
 # --- Logo --- #
 
@@ -40,8 +38,7 @@ round-avatar: true
 # Uncomment the links you want to show and add your information to each one.
 social-network-links:
   email: "jprstrong AT gmail.com"
-# github: daattali
-  twitter: "@Jingpu CHEN"
+  github: jprstrong
 # patreon: DeanAttali
 # youtube: c/daattali
 #  reddit: yourname
@@ -63,7 +60,7 @@ social-network-links:
 
 # If you want to show a link to an RSS in the footer, add the site description here.
 # If you don't want to show an RSS link, remove the following line.
-rss-description: This website is a virtual proof that I'm awesome
+rss-description: Field notes by Jingpu Chen on data, AI, and practical systems
 
 # --- General options --- #
 
@@ -185,7 +182,7 @@ date_format: "%B %-d, %Y"
 # --- You don't need to touch anything below here (but you can if you want) --- #
 
 # Output options (more information on Jekyll's site)
-timezone: "America/Toronto"
+timezone: "Asia/Shanghai"
 markdown: kramdown
 highlighter: rouge
 permalink: /:year-:month-:day-:title/
@@ -227,4 +224,3 @@ plugins:
 
 # Beautiful Jekyll / Dean Attali
 # 2fc73a3a967e97599c9763d05e564189
-
