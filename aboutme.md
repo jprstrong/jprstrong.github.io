@@ -1,16 +1,14 @@
 ---
 layout: page
 title: About me
-subtitle: Why you'd want to go on a date with me
+subtitle: Statistics, data products, and AI-assisted problem solving
 ---
 
-My name is Inigo Montoya. I have the following qualities:
+I am Jingpu Chen, a data and AI practitioner with an M.Sc. in Statistics and
+Data Science from KU Leuven. My work sits between analysis, product thinking,
+and implementation: translating complex questions into data models, indicators,
+workflows, dashboards, and explanations that people can use.
 
-- I rock a great mustache
-- I'm extremely loyal to my family
-
-What else do you need?
-
-### My story
-
-To be honest, I'm having some trouble remembering right now, so why don't you just watch [my movie](https://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29) and it will answer **all** your questions.
+This site is a home for edited field notes about reliable analytics, AI-assisted
+development, and the practical work of turning evidence into decisions. Private
+projects, client information, and source data remain private by default.
