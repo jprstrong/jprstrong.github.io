@@ -16,8 +16,6 @@ css:
 
 Between March and July 2026, while between roles, I set myself a practical learning goal: become much better at turning an ambiguous question into a useful, working data product. I studied AI fundamentals, prompt engineering, data-analysis workflows, and modern application development, then applied them through a series of hands-on dashboard and analytical prototypes.
 
-Much of that work involved private data or problem contexts. This field note therefore contains no client names, identifiable datasets, original project screens, or proprietary results. Instead, it distils the reusable production method I developed: how I move from a prompt to a dashboard whose numbers, interactions, and conclusions can be checked.
-
 <div class="field-note-disclosure" markdown="1">
 <strong>Privacy note.</strong> The two interface visuals below are anonymized reconstructions based on patterns from my independent project work. Names, labels, and values are synthetic; they are evidence of the workflow and design decisions, not reproductions of private systems or client results.
 </div>
@@ -151,17 +149,17 @@ My current workflow is simple enough to repeat:
 
 The central idea is that speed and rigour are not opposites. AI-assisted coding makes iteration faster; disciplined context, validation, and documentation make that speed useful. The goal is not to produce more charts. It is to shorten the distance between a real question and trustworthy evidence—without losing the reasoning in between.
 
-## Epilogue: from dashboards to a pot of cilantro
+## Epilogue: visualizing a personal growing experiment
 
-Not every experiment in this period ended as a dashboard. One small project began with an ordinary household question: was the soil in a pot suitable for growing cilantro? General advice such as “keep the soil moist but well drained” was too vague to act on, so I translated it into three observable checks and built a compact guide around them.
+Gardening is one of my hobbies, and growing cilantro at home gave me a chance to try something more personal. This experiment was separate from my dashboard work. I was simply curious whether a small visual tool could make caring for a plant more intuitive, engaging, and enjoyable.
 
-The first was a hand test: moist soil should form a loose ball, then break apart when touched rather than staying sticky or hard. The second was a watering test: after a thorough watering, excess water should drain from the bottom instead of remaining on the surface. The third was a pH check, using 6.2–6.8 as the target range presented in the guide. Together, the tests turned a broad recommendation into conditions that could be observed, recorded, and revisited.
+I began with the questions I found myself asking when looking at the pot: Does the soil feel right? Is the water draining properly? Is the pH within a suitable range? Instead of leaving the answers scattered across gardening notes, I turned them into three simple visual checks—a hand test for soil texture, a watering test for drainage, and a pH reference of 6.2–6.8. The aim was not to optimize the plant through a sophisticated analytical system. It was to reduce guesswork and create a clearer routine for observing and learning from the growing process.
 
 <figure class="field-note-figure field-note-figure--cilantro">
   <a href="{{ '/assets/img/from-prompt-to-proof/cilantro-tests.png' | relative_url }}" target="_blank" rel="noopener">
     <img src="{{ '/assets/img/from-prompt-to-proof/cilantro-tests.png' | relative_url }}" alt="A Chinese-language cilantro growing guide presenting three small soil checks: hand texture, drainage after watering, and pH between 6.2 and 6.8" loading="lazy">
   </a>
-  <figcaption>The three-test section from my cilantro planting guide: hand texture, drainage, and pH. It is a small example of converting advice into observable acceptance criteria.</figcaption>
+  <figcaption>The first visual prototype for my cilantro experiment, bringing soil texture, drainage, and pH guidance into one simple view.</figcaption>
 </figure>
 
-The subject was gardening, but the reasoning was familiar: begin with a real question, replace vague language with observable criteria, run the smallest useful test, keep a record, and adjust one variable at a time. Whether the subject is a portfolio of candidates, a weekly signal, or a pot of cilantro, the path from prompt to proof is built from the same habit—making the evidence visible enough to challenge.
+This is only the first iteration. A future version could incorporate photographs taken over time, watering and growth records, weather context, and short observation notes, gradually turning the static guide into a personal growing journal shaped by what actually happens to the plant. That possibility is what I enjoy about AI-assisted coding: not every project needs to solve a business problem. Sometimes it can simply make a hobby more thoughtful, more visual, and more rewarding to explore.
