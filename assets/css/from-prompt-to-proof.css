@@ -1,0 +1,59 @@
+.field-note-disclosure {
+  margin: 2rem 0;
+  padding: 1.15rem 1.3rem;
+  border-left: 4px solid #2f6a4c;
+  border-radius: 0 12px 12px 0;
+  background: #f1f5ef;
+  color: #435047;
+  font-size: 0.94rem;
+}
+
+.field-note-figure {
+  margin: 2rem 0 2.25rem;
+}
+
+.field-note-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid rgba(35, 48, 40, 0.13);
+  border-radius: 16px;
+  box-shadow: 0 16px 42px rgba(27, 45, 34, 0.11);
+}
+
+.field-note-figure figcaption {
+  max-width: 92%;
+  margin: 0.8rem auto 0;
+  color: #6d756f;
+  font-size: 0.86rem;
+  line-height: 1.55;
+  text-align: center;
+}
+
+.case-takeaway {
+  margin: 1.25rem 0 2.1rem;
+  padding: 1rem 1.15rem;
+  border: 1px solid #e1e6df;
+  border-radius: 12px;
+  background: #fbfcfa;
+}
+
+.case-takeaway strong {
+  color: #265a43;
+}
+
+@media (max-width: 767px) {
+  .field-note-figure {
+    margin-right: -0.75rem;
+    margin-left: -0.75rem;
+  }
+
+  .field-note-figure img {
+    border-radius: 11px;
+  }
+
+  .field-note-figure figcaption {
+    max-width: calc(100% - 1.5rem);
+    font-size: 0.8rem;
+  }
+}

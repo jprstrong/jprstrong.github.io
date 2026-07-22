@@ -8,13 +8,19 @@ tags: [data analytics, dashboards, AI-assisted development, vibe coding]
 comments: false
 social-share: true
 readtime: true
+css:
+  - "/assets/css/from-prompt-to-proof.css"
 ---
 
 *By Jingpu Chen*
 
 Between March and July 2026, while between roles, I set myself a practical learning goal: become much better at turning an ambiguous question into a useful, working data product. I studied AI fundamentals, prompt engineering, data-analysis workflows, and modern application development, then applied them through a series of hands-on dashboard and analytical prototypes.
 
-Much of that work involved private data or problem contexts. This field note therefore contains no client names, project descriptions, datasets, screenshots, or proprietary results. Instead, it distils the reusable production method I developed: how I move from a prompt to a dashboard whose numbers, interactions, and conclusions can be checked.
+Much of that work involved private data or problem contexts. This field note therefore contains no client names, identifiable datasets, original project screens, or proprietary results. Instead, it distils the reusable production method I developed: how I move from a prompt to a dashboard whose numbers, interactions, and conclusions can be checked.
+
+<div class="field-note-disclosure" markdown="1">
+<strong>Privacy note.</strong> The two interface visuals below are anonymized reconstructions based on patterns from my independent project work. Names, labels, and values are synthetic; they are evidence of the workflow and design decisions, not reproductions of private systems or client results.
+</div>
 
 ## A dashboard is a decision interface
 
@@ -49,6 +55,44 @@ Vibe coding is most productive when the feedback loop is short. I do not try to 
 Once that slice is correct, the pattern can be extended. This approach makes errors cheaper to find and prompts easier to improve. It also separates problems in the data from problems in the interface.
 
 Depending on the task, my working toolkit has included Python, SQL, R, Excel, Power BI, Tableau, and web stacks using TypeScript, React, Next.js, and charting libraries. The specific tool matters less than the contract between stages: raw evidence, transformed data, metric logic, visual encoding, and user interpretation.
+
+## What the method looked like in practice
+
+The principles above became much clearer when I had to make them work inside complete prototypes. Two examples helped me move beyond prompting for isolated charts and towards designing traceable analytical products.
+
+### Case note A: A local-first monitoring dashboard
+
+In one project, I built a browser-based prototype that turned repeated daily records into a weekly review. The challenge was not drawing the trend line; it was preserving the meaning of each observation as it moved from entry to summary. I defined the grain as one record per day, kept a missing day distinct from a measured zero, and derived the weekly indicators from documented rules rather than from values embedded in the interface.
+
+The dashboard paired summary cards with a seven-day trend, a visible evidence trail, and a validation log. A reviewer could see which records contributed to a metric, when data was missing, and why a flag had appeared. The design was local-first, so the working records could remain in the browser, and export/import behaviour was tested alongside the calculations. I also added automated checks for date boundaries, zero denominators, filter combinations, and empty states—the places where a polished chart can quietly become misleading.
+
+<figure class="field-note-figure">
+  <a href="{{ '/assets/img/from-prompt-to-proof/monitoring-dashboard.svg' | relative_url }}" target="_blank" rel="noopener">
+    <img src="{{ '/assets/img/from-prompt-to-proof/monitoring-dashboard.svg' | relative_url }}" alt="An anonymized local-first monitoring dashboard showing synthetic weekly indicators, a seven-day trend, an evidence trail, and validation checks" loading="lazy">
+  </a>
+  <figcaption>An anonymized reconstruction with synthetic values. The important design choice is the connection between each summary, its supporting records, and the checks applied before display. Open the image to inspect the full-size evidence chain.</figcaption>
+</figure>
+
+<div class="case-takeaway" markdown="1">
+<strong>What this supports:</strong> a dashboard becomes trustworthy when the user can move backwards from the headline number to its rule, contributing records, and known exceptions.
+</div>
+
+### Case note B: An AI-assisted prioritization workspace
+
+A second project began with a different kind of ambiguity: unstructured descriptions had to be compared consistently before a person could decide what deserved attention. I used AI to interpret each item into a typed schema—evidence, signals, uncertainties, and comparable dimensions—but kept the actual score and recommendation in deterministic code. This separation mattered. It allowed the language model to help structure messy inputs without allowing a fluent paragraph to become the decision rule.
+
+The resulting workspace made the pipeline visible: source evidence entered on the left, structured interpretation appeared in the middle, and the score, recommendation, caveats, and next action appeared on the right. Invalid or incomplete model outputs were rejected rather than silently accepted. A mock provider made the workflow testable without a live model, schema validation protected the boundary between AI output and application logic, and unit and integration tests covered the scoring rules and persistence layer.
+
+<figure class="field-note-figure">
+  <a href="{{ '/assets/img/from-prompt-to-proof/prioritization-workbench.svg' | relative_url }}" target="_blank" rel="noopener">
+    <img src="{{ '/assets/img/from-prompt-to-proof/prioritization-workbench.svg' | relative_url }}" alt="An anonymized AI-assisted prioritization workspace showing synthetic evidence, structured interpretation, deterministic scoring, and validation guardrails" loading="lazy">
+  </a>
+  <figcaption>An anonymized reconstruction with synthetic candidates and scores. AI assists with interpretation; transparent rules, validation, and human review remain responsible for the decision. Open the image to inspect the full-size workflow.</figcaption>
+</figure>
+
+<div class="case-takeaway" markdown="1">
+<strong>What this supports:</strong> AI is most useful inside an analytical product when its uncertain interpretation is kept separate from reproducible calculations and accountable judgment.
+</div>
 
 ## Prompt for constraints and evidence
 
@@ -106,3 +150,18 @@ My current workflow is simple enough to repeat:
 8. Package the result so another person can run, review, and maintain it.
 
 The central idea is that speed and rigour are not opposites. AI-assisted coding makes iteration faster; disciplined context, validation, and documentation make that speed useful. The goal is not to produce more charts. It is to shorten the distance between a real question and trustworthy evidence—without losing the reasoning in between.
+
+## Epilogue: from dashboards to a pot of cilantro
+
+Not every experiment in this period ended as a dashboard. One small project began with an ordinary household question: was the soil in a pot suitable for growing cilantro? General advice such as “keep the soil moist but well drained” was too vague to act on, so I translated it into three observable checks and built a compact guide around them.
+
+The first was a hand test: moist soil should form a loose ball, then break apart when touched rather than staying sticky or hard. The second was a watering test: after a thorough watering, excess water should drain from the bottom instead of remaining on the surface. The third was a pH check, using 6.2–6.8 as the target range presented in the guide. Together, the tests turned a broad recommendation into conditions that could be observed, recorded, and revisited.
+
+<figure class="field-note-figure field-note-figure--cilantro">
+  <a href="{{ '/assets/img/from-prompt-to-proof/cilantro-tests.png' | relative_url }}" target="_blank" rel="noopener">
+    <img src="{{ '/assets/img/from-prompt-to-proof/cilantro-tests.png' | relative_url }}" alt="A Chinese-language cilantro growing guide presenting three small soil checks: hand texture, drainage after watering, and pH between 6.2 and 6.8" loading="lazy">
+  </a>
+  <figcaption>The three-test section from my cilantro planting guide: hand texture, drainage, and pH. It is a small example of converting advice into observable acceptance criteria.</figcaption>
+</figure>
+
+The subject was gardening, but the reasoning was familiar: begin with a real question, replace vague language with observable criteria, run the smallest useful test, keep a record, and adjust one variable at a time. Whether the subject is a portfolio of candidates, a weekly signal, or a pot of cilantro, the path from prompt to proof is built from the same habit—making the evidence visible enough to challenge.
